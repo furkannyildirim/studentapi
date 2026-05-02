@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:15
@@ -16,10 +14,10 @@ services:
       - studentapi-network
 
   app:
-    build: .
+    image: furkan23/studentapi:latest
     container_name: studentapi-app
     ports:
-      - "8080:8080"
+      - "80:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentdb
       SPRING_DATASOURCE_USERNAME: admin
