@@ -20,6 +20,11 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
+    @GetMapping("/health")
+    public String health() {
+        return "OK v2";
+    }
+    
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         return ResponseEntity.ok(studentService.getStudentById(id));
