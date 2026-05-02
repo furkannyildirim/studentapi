@@ -14,7 +14,7 @@ services:
       - studentapi-network
 
   app:
-    image: furkan23/studentapi:latest
+    image: furkann23/studentapi:latest
     container_name: studentapi-app
     ports:
       - "80:8080"
