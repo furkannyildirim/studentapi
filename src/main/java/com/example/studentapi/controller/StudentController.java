@@ -24,7 +24,7 @@ public class StudentController {
     public String health() {
         return "OK v2";
     }
-    
+
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         return ResponseEntity.ok(studentService.getStudentById(id));
